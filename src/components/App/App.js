@@ -33,11 +33,6 @@ class App extends Component {
               path={'/'}
               component={ThingListPage}
             />
-            {
-              TokenService.hasAuthToken() 
-                ? <Redirect to={'/'} />
-                : <Route path="/login" component={LoginPage} />
-            }
             <PublicOnlyRoute
               path={'/login'}
               component={LoginPage}
